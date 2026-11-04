@@ -1,0 +1,45 @@
+{
+  "name": "@pmwdigital/ai-guard",
+  "version": "0.1.0",
+  "description": "Guard for Anthropic API calls: classifies errors, pauses after billing or auth failures, and reports why AI is unavailable",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmwdigital/pmw-ai-guard.git"
+  },
+  "keywords": [
+    "anthropic",
+    "claude",
+    "billing",
+    "circuit-breaker",
+    "error-classification"
+  ]
+}
